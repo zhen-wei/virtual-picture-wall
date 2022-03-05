@@ -1,5 +1,6 @@
 import './performance'
 import { debounce } from './debounce'
+import { displayZoomImg } from './zoomImg'
 import { MasonryLayout } from  './masonryLayout'
 
 interface ImageData {
@@ -11,6 +12,7 @@ interface ImageData {
 }
 
 const masonry = document.querySelector('.masonry-layout') as HTMLElement
+
 const template = document.createElement('template')
 
 const masonryLayout = new MasonryLayout({
@@ -72,6 +74,7 @@ const observer = new IntersectionObserver(loadNewPicture)
 observer.observe(masonry)
 
 function calculationColumns() {
+  console.log(masonry.clientWidth)
   const width = [480, 800, 1024, 1200]
   const index = width.findIndex(w => window.innerWidth <= w)
   return index === -1 ? width.length + 1 : index + 1
@@ -80,6 +83,7 @@ function calculationColumns() {
 function scroll() {
   masonryLayout.render(window.scrollY)
 }
+
 
 function resize() {
   window.removeEventListener('scroll', scroll)
@@ -92,6 +96,13 @@ function resize() {
     window.addEventListener('scroll', scroll)
   },200)
 }
+
+masonry.addEventListener('click', ev => {
+  if (ev.target instanceof HTMLImageElement && masonryLayout.columns > 1) {
+    displayZoomImg(ev.target.currentSrc)
+  }
+})
+
 
 window.addEventListener('scroll', scroll)
 

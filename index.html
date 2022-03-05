@@ -3,13 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
+
     <title>picture-wall</title>
     <link rel="stylesheet" href="./src/style.css">
     <script src="./src/script.ts" type="module"></script>
 </head>
 
 <body>
-    <ul class="masonry-layout"></ul>
+    <div class="picture-wall">
+        <ul class="masonry-layout"></ul>
+    </div>
+    <div class="zoom-img-bg" id="zoomImgBg">
+        <img src="" alt="" id="zoomImg" draggable="false">
+    </div>
 </body>
 </html>

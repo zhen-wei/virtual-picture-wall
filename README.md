@@ -4,4 +4,4 @@
 
 [Page](https://zhen-wei.github.io/virtual-picture-wall/)
 
-![img](./index.PNG)
+![img](./index.png)
