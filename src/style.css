@@ -82,7 +82,7 @@ ul {
 }
 .zoom-img-bg > img {
     max-width: 50%;
-    max-height: 10%;
+    max-height: 80%;
     height: auto;
     user-select: none;
     cursor: grab;
