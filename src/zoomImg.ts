@@ -19,7 +19,7 @@ const zoomImgOptions = {
   },
   touchZoom: false,
   level: 1,
-  MAX: 60,
+  MAX: 16,
   MIN: 1
 }
 
