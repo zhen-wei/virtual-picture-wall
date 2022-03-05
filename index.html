@@ -3,15 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
+
     <title>picture-wall</title>
     
     
-  <script type="module" crossorigin src="/virtual-picture-wall/assets/index.b98ca8a1.js"></script>
-  <link rel="stylesheet" href="/virtual-picture-wall/assets/index.888be132.css">
+  <script type="module" crossorigin src="/virtual-picture-wall/assets/index.57988c7e.js"></script>
+  <link rel="modulepreload" href="/virtual-picture-wall/assets/vendor.09eb8132.js">
+  <link rel="stylesheet" href="/virtual-picture-wall/assets/index.cdb41b52.css">
 </head>
 
 <body>
-    <ul class="masonry-layout"></ul>
+    <div class="picture-wall">
+        <ul class="masonry-layout"></ul>
+    </div>
+    <div class="zoom-img-bg" id="zoomImgBg">
+        <img src="" alt="" id="zoomImg" draggable="false">
+    </div>
 </body>
 </html>
